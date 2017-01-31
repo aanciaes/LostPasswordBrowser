@@ -4,14 +4,13 @@
         <title>Lost Password Browser</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="stylesheets/main.css">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> 
     </head>
     <body>
         <section class="row-alt">
             <div class="lead container">
-                
+
                 <h1>Lost Password Browser</h1>
-                
+
                 <form class="col-1-3" method="POST" action="controller">
                     <fieldset class="query-group">
                         <input type="hidden" name="todo" value ="queryByExample"/>

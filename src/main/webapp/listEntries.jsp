@@ -14,6 +14,7 @@
 <%@page import="org.apache.logging.log4j.Logger"%>
 <%@page import="org.apache.logging.log4j.LogManager"%>
 <%@page import="personal.miguel.lostpasswordbrowser.HibernateSessionManager"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,7 +22,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Lost Password Browser</title>
         <link rel="stylesheet" href="stylesheets/main.css">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> 
         <!--                <style>
                            table {
                                 margin-left: auto;
