@@ -47,7 +47,7 @@
     <body>
         <section class="row-alt">
             <div class="lead container">
-                <h1>Results</h1>
+                <h1>Query Results</h1>
                 <table>
                     <tr class="row row-alt">
                         <th>User ID</th>
