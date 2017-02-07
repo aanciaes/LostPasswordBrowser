@@ -22,27 +22,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Lost Password Browser</title>
         <link rel="stylesheet" href="stylesheets/main.css">
-        <!--                <style>
-                           table {
-                                margin-left: auto;
-                                margin-right: auto;
-                                border-collapse: collapse;
-                                width: 95%;
-                            }
-                
-                            th, td {
-                                text-align: left;
-                                padding: 8px;
-                            }
-                
-                            tr:nth-child(even){background-color: #f2f2f2}
-                            tr:hover {background-color: #BDBDBD}
-                
-                            th {
-                                background-color: #848484;
-                                color: white;
-                            }
-                        </style>-->
     </head>
     <body>
         <section class="row-alt">
@@ -52,6 +31,7 @@
                     <tr class="row row-alt">
                         <th>User ID</th>
                         <th>Ticket</th>
+                        <th>Email</th>
                         <th>Timestamp</th>
                         <th>Status</th>
                     </tr>
@@ -66,6 +46,7 @@
 
                         <td><%=entry.getUserId()%></td>
                         <td><%=entry.getTicket()%></td>
+                        <td><%=validateEmail(entry.getEmail())%></td>
                         <td><%=entry.getTimestamp().toString()%></td>
                         <td><%=entry.getStatus()%></td>
                     </tr>
@@ -77,10 +58,21 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <%
                         }
                     %>
+                    
+                    <%!
+                        private String validateEmail(String email) {
+                            String isValid="Invalid";                            
+                            if(email.matches("(.*)@(.*).(.*)"))
+                                isValid = "Valid";
+                            return isValid;
+                        }
+                        %>
+                        
                 </table><br/><hr/><br/>
                 <form method="POST" action="index.jsp">
                     <input class="btn btn-alt" type="submit" value="Go Back"/>
