@@ -25,28 +25,28 @@ public class Entry implements Serializable {
     @Id
     @Column(name = "USERID")
     private String userId;
-    
+
     @Column(name = "URL")
     private String url;
-    
+
     @Id
     @Column(name = "TICKET")
     private String ticket;
-    
+
     @Temporal(TemporalType.DATE)
     @Column(name = "TIMESTAMP")
     private Date timestamp;
-    
+
     @Column(name = "STATUS")
     private String status;
-    
+
     @Column(name = "USER_UID")
     private String userUID;
-    
+
     @Column(name = "EMAIL")
     private String email;
-    
-    public Entry () {
+
+    public Entry() {
         ;
     }
 
@@ -76,5 +76,13 @@ public class Entry implements Serializable {
 
     public String getEmail() {
         return email;
-    }         
+    }
+
+    public String validateEmail() {
+        String isValid = "Invalid";
+        if (email.matches("(.*)@(.*).(.*)")) {
+            isValid = "Valid";
+        }
+        return isValid;
+    }
 }
